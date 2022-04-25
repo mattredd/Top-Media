@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="aboutVC" id="Y6W-OH-hqX" customClass="AboutViewController" customModule="Top_Media" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-ko-ZtJ">
+                                <rect key="frame" x="132.5" y="44" width="149" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This product uses the TMDB API but is not endorsed or certified by TMDB." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-k3-PJG">
+                                <rect key="frame" x="20" y="813" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmdbLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-gq-xyt">
+                                <rect key="frame" x="0.0" y="412" width="414" height="82"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="83l-5j-Le9">
+                                <rect key="frame" x="-305" y="90.5" width="1024" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Lpc-is-XQX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QzC-k3-PJG" secondAttribute="bottom" constant="8" id="4vP-6h-MPs"/>
+                            <constraint firstItem="83l-5j-Le9" firstAttribute="top" secondItem="UDX-ko-ZtJ" secondAttribute="bottom" constant="8" symbolic="YES" id="8BO-bp-XrM"/>
+                            <constraint firstItem="UDX-ko-ZtJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FAg-9j-HpM"/>
+                            <constraint firstItem="jd5-gq-xyt" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="WC3-Le-crz"/>
+                            <constraint firstItem="UDX-ko-ZtJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YOn-Pj-ykR"/>
+                            <constraint firstItem="83l-5j-Le9" firstAttribute="centerX" secondItem="UDX-ko-ZtJ" secondAttribute="centerX" id="atu-Ng-NIP"/>
+                            <constraint firstItem="QzC-k3-PJG" firstAttribute="centerX" secondItem="UDX-ko-ZtJ" secondAttribute="centerX" id="gb2-Vq-MPK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jd5-gq-xyt" secondAttribute="trailing" id="lVA-xq-4g4"/>
+                            <constraint firstItem="QzC-k3-PJG" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="toq-At-6BK"/>
+                            <constraint firstItem="jd5-gq-xyt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ugg-aq-KHd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centreConstraint" destination="WC3-Le-crz" id="jFj-rb-aEG"/>
+                        <outlet property="logoLeadingConstraint" destination="ugg-aq-KHd" id="Ije-6r-eGf"/>
+                        <outlet property="logoTrailingConstraint" destination="lVA-xq-4g4" id="i5j-T4-nZL"/>
+                        <outlet property="logoView" destination="jd5-gq-xyt" id="aIS-dA-Lqi"/>
+                        <outlet property="requireTextLabel" destination="QzC-k3-PJG" id="fs5-9i-pby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appIcon" width="1024" height="1024"/>
+        <image name="tmdbLogo" width="190.24000549316406" height="81.519996643066406"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
