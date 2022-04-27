@@ -1,6 +1,6 @@
 #  Top Media
 
-**Top Media** is an app where you can find the top trending TV shows and films. You can also search for any TV show or film that you wish. You can select a media and see more detailed information.
+**Top Media** is an app where you can find the top trending TV shows and films. You can also search for TV show or films.
 
 **Top Media** uses both UIKit and SwiftUI. With UIKit, I wanted to retain a reactive UI so I used Combine to ensure that the UI is always updated when the model changes.
 
