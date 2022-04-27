@@ -83,7 +83,8 @@ struct CreditList: View {
                 }
                 .headerProminence(.increased)
             }
-            Text("Unable to display cast")
+        } else {
+            Text("Unable to display cast")            
         }
     }
 }
