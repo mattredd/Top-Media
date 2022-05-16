@@ -16,12 +16,14 @@ class MediaSearchViewModel: ObservableObject {
     @Published var message = ""
     let mediaService: MediaService
     var cancellables: Set<AnyCancellable> = []
+    var searchTask: Task<Void, Never>?
     
     init(service: MediaService) {
         self.mediaService = service
         $searchParameters.throttle(for: 0.5, scheduler: RunLoop.main, latest: true).sink(receiveValue: { [weak self] searchTerm, searchType in
             guard let self = self, let searchTerm = searchTerm, !searchTerm.isEmpty else { self?.media = []; return }
-            Task {
+            self.searchTask?.cancel()
+            self.searchTask = Task {
                 await self.searchMedia(searchTerm: searchTerm, searchType: searchType)
             }
         }).store(in: &cancellables)
@@ -31,7 +33,9 @@ class MediaSearchViewModel: ObservableObject {
         message = ""
         guard let searchTerm = searchTerm, !searchTerm.isEmpty else { return }
         do {
-            media = try await mediaService.searchMedia(searchTerm: searchTerm, mediaType: searchType)
+            let newMedia = try await mediaService.searchMedia(searchTerm: searchTerm, mediaType: searchType)
+            guard !Task.isCancelled else { return }
+            media = newMedia
             if media[0].isEmpty && media[1].isEmpty {
                 message = "Unable to find media for your search query"
             }
