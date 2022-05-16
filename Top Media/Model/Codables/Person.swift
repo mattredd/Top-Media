@@ -10,7 +10,7 @@ import Foundation
 struct Person: Codable, Hashable {
     let id: Int
     let name: String
-    let profilePath: String
+    let profilePath: String?
     let adult: Bool
 }
 

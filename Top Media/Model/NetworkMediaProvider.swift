@@ -39,7 +39,6 @@ class NetworkMediaProvider {
             if error is DecodingError {
                 throw APIError.invalidReturnFormat
             } else if error is APIError {
-                print("What")
                 throw error
             } else {
                 throw APIError.networkError

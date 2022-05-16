@@ -20,9 +20,8 @@ class VideosViewModel<S: YoutubeProvider>: ObservableObject {
         self.videos = videos
         Task {
             do {
-                // TODO - At the moment only 50 videos will be downloaded due to the API limits, in future we should download all the videos to the user. Unfortuantely we can't implement pagination as we are sorting the videos by view count.
                 if let videos = videos {
-                    let vids = try await service.fetchVideoMetadata(ids: Array(videos.lazy.filter({ $0.site == "YouTube"}).map(\.key).prefix(50)))
+                    let vids = try await service.fetchVideoMetadata(ids: Array(videos.lazy.filter({ $0.site == "YouTube"}).map(\.key)))
                     youtubeVideos = vids.sorted { videoA, videoB in
                         Int(videoA.statistics.viewCount)! > Int(videoB.statistics.viewCount)!
                     }
