@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppConstants {
-    // As a portfolio app, API keys are provided for convenience and are not connected to a paid account
+    // As a portfolio app API keys are provided for convenience and are not connected to a paid account
     static var tvdmAPIKey = "15f6434646162c8b0fdd907f55f27e3b"
-    static let youtubeAPiKey = "AIzaSyASZKaHPs3UgWj0sNBhyXTMseGpUC00Rfs"
+    static let youtubeAPiKey = "AIzaSyCBpzAJgdfhBMdLRAQJDfyASItLm3FLuWg"
 }
