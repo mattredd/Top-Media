@@ -16,7 +16,7 @@ The home tab shows the top trending films and TV shows. The screen also includes
 
 <img width="231" alt="Simulator Screen Shot - iPhone 13 - 2022-04-21 at 03 40 33" src="https://user-images.githubusercontent.com/5818573/164361434-a7b51114-b96c-4f19-a6c7-88e61bf5f0e9.png"> <img width="231" alt="Simulator Screen Shot - iPhone 13 - 2022-04-21 at 03 40 16" src="https://user-images.githubusercontent.com/5818573/164361539-cbcdbb3d-80d1-479c-80a1-c88fec2db756.png"> <img width="231" alt="Simulator Screen Shot - iPhone 13 - 2022-04-21 at 03 40 37" src="https://user-images.githubusercontent.com/5818573/164361443-21b7a935-7114-43d5-8796-e763775a59ef.png"> <img width="231" alt="Simulator Screen Shot - iPhone 13 - 2022-04-21 at 03 40 41" src="https://user-images.githubusercontent.com/5818573/164361446-f5c1193e-35df-4f70-b3af-1251aedff717.png">
 
-The detail screen provides the most relevant information. You can tap on the heart to favourite the media and it will show up on the favourites tab. You can also view the cast or videos from Youtube.
+The detail screen provides the most relevant information. You can tap on the heart to favourite the media and it will show up in the favourites tab. You can also view the cast or videos from Youtube.
 
 ### Search
 
